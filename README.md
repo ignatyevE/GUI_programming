@@ -1,2 +1,2 @@
 # myPage
-This is a test to learn how to use Github
+This will be used for the GUI Programming I course. 

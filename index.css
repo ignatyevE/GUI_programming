@@ -13,7 +13,7 @@
 body {
     font-size: 1.25em;
     scroll-behavior: smooth;
-    background-image: url(snowy_day.jpg);
+    background-image: url(/snowy_day.jpg);
     font-family: calluna, Georgia, Times, "Times New Roman", serif;
     color: #F9E1E1;
 }

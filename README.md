@@ -1,2 +1,2 @@
-# GUI_programming
-This project will have all files for the GUI Programming course.
+# myPage
+This is a test to learn how to use Github

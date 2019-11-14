@@ -1,0 +1,127 @@
+/*
+    Name: Elliot Ignatyev
+    Email: anna_ignatyev@student.uml.edu
+    Course: Fall 2019 GUI Programming I
+    Date: 11/14/19
+    Assignment: Assignment 6
+*/
+
+/*
+    To the whole page the default font size is specified, as well as there being a background with blends with the background.
+*/
+body {
+    font-size: 1.25em;
+    background-color: #9cdde1;
+    background-image: url(../images/tiles2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    font-family:  Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-weight: bold;
+}
+
+/*
+    Makes it so that the section with the app id is centered in the page and has it's own background. It is also displayed as a grid so that the form and table are properly formatted on the page. The form and header have a seperate background as to make it easier to read, as the section background has an image.
+*/
+#app{
+    background-color: #faf9ce;
+    margin: auto;
+    margin-top: 25px;
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    max-height: 95vh;
+    max-width: 125vh;
+    border-radius: 5%;
+    background-image: url("../images/yellowCirclesbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: hard-light;
+
+}
+
+header {
+    grid-row: 1;
+    font-size: .80em;
+    background-color: rgba(255, 255, 236, 75%);
+}
+
+#form {
+    grid-row: 2;
+    background-color: rgba(255, 255, 236, 75%);
+}
+
+/*
+    The following segments were borrowed from bitsofco.de, and specifically from their tutorial https://bitsofco.de/realtime-form-validation/
+    This makes it so that the input requirements have different styles depending on if the input is in the correct format. It also adds a visual marker if the input is in the correct format.
+*/
+.input-requirements {
+  font-size: .80em;
+  text-align: left;
+  list-style: disc;
+  list-style-position: inside;
+  max-width: 400px;
+  margin: 10px auto;
+  color: rgb(150,150,150);
+}
+
+.input-requirements li.invalid {
+	color: #e74c3c;
+}
+
+.input-requirements li.valid {
+	color: #2ecc71;
+}
+
+.input-requirements li.valid:after {
+	display: inline-block;
+	padding-left: 10px;
+	content: "\2713";
+}
+
+/*
+    The rest is done by me
+    This styles the submit button so that the cursor changes and so it fits with the rest of the webpage.
+*/
+input[type="submit"] {
+    background-color: #9cddff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 15%;
+    font-size: .9em;
+}
+
+/*
+    This styles the table, once it appears. It makes it so that it is centered on the page and once it gets too large for the app section, scrollbars appear. The colors also have it be checkerboard patterned
+*/
+#table {
+    grid-row: 3;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 52vh;
+    max-width: 115vh;
+    margin: auto;
+    margin-top: 30px;
+}
+
+table, th, td {
+    padding: 5px;
+    background-color: #ffffec;
+    border-collapse: collapse;
+}
+
+th, table {
+    border: 1px #9cddff solid;
+}
+
+td {
+    background-color: #9cddff;
+}
+
+tr:nth-child(even) td:nth-child(odd), tr:nth-child(odd) td:nth-child(even){
+    background-color: white;
+}

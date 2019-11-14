@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+    Name: Elliot Ignatyev
+    Email: anna_ignatyev@student.uml.edu
+    Course: Fall 2019 GUI Programming I
+    Date: 11/14/19
+    Assignment: Assignment 6
+    Description: Assignment was to create a form that would take four inputs corresponding to the range of the multiplier and multiplicand and have it arrange in a multiplication table. There needs to be form validation with error checking involved.
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- other meta data -->
+        <title>Multiplication Table</title>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/multTable.css">
+    </head>
+    <body>
+        
+        <!--
+            The next section is seperate from the body so it can be formatted seperatly from the rest of the page. This segment includes the form that takes four inputs, which when submitted has room for the multiplication table.
+        -->
+        <div id="app">
+            <header>
+                <h1>* Multiplication Table *</h1>
+            </header>
+            <section id="form">
+                <form name="multForm">
+                    <p>Input numerical values for the horizontal and vertical range of the table. Order doesn't matter.</p>
+                    <label for="horizontalRange">
+                        <span>Horizonal Range: </span>
+                        <input type="text" id="firstStartRange" required>
+                        <span> to </span>
+                        <input type="text" id="firstEndRange" required>
+                        <ul class="input-requirements">
+                            <li>Contains only numbers</li>
+                            <li>The values are no more than 100 and no less than -100</li>
+                        </ul>
+                    </label>
+                    <label for="verticalRange">
+                        <span>Vertical Range: </span>
+                        <input type="text" id="secondStartRange" required>
+                        <span> to </span>
+                        <input type="text" id="secondEndRange" required>
+                        <ul class="input-requirements">
+                            <li>Contains only numbers</li>
+                            <li>The values are no more than 100 and no less than -100</li>
+                        </ul>
+                    </label>
+                    <br>
+                    <input type="submit" value="Submit" onclick="return getSubmitData()">
+            </section>
+            <section id="table">
+
+            </section>
+        </div>
+
+        <!-- scripts: -->
+            <script type="text/javascript" src="js/table.js">
+            </script>
+    </body>

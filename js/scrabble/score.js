@@ -2,17 +2,20 @@
     Name: Elliot Ignatyev
     Email: anna_ignatyev@student.uml.edu
     Course: Fall 2019 GUI Programming I
-    Date:
+    Date: 12/19/19
     Assignment: Assignment 9
-    Notes:
 */
 var score = 0;
 
+/*----------------------------
+    calculateScore
+    
+    Needs to be called with the tile value and the type of board tile the tile was placed on.
+    First checks what board tile it is, to see if the tile value needs to be modified. After this, 
+        the global variable of Score is updated, and then the html is changed to have the new score.
+
+-----------------------------*/
 function calculateScore(tile, board){
-    //when something is placed on the board(call this function from drop)
-    //take the value of the tile being placed and add that to the score
-    //the score is then modified and it changes the valuse in numScore
-    //after that works, we then check the board modifier and apply that to the score
     if(board == "double"){
         tile = tile*2;
     }
@@ -24,6 +27,16 @@ function calculateScore(tile, board){
     $("#numScore").remove();
     $("#score").append(newScore);
 }
+
+/*---------------------------
+    resetGame
+    
+    Upon pressing the Start Over button this function is called.
+    This resets the score back to 0 and changes the html to reflect this.
+    This also used the global variable alphabet to make sure that each scrabble tile's 
+        number remaining is back to its original distribution value.
+        
+---------------------------*/
 
 function resetGame(){
     score = 0;

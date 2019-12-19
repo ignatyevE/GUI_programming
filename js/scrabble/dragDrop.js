@@ -1,6 +1,24 @@
+/*
+    Name: Elliot Ignatyev
+    Email: anna_ignatyev@student.uml.edu
+    Course: Fall 2019 GUI Programming I
+    Date: 12/19/19
+    Assignment: Assignment 9 
+*/
+//because the newTiles() function needs to be used at various points, it is seperate from page loading 
 $(function() {
     newTiles();
 });
+
+/*---------------------
+    newTiles
+    
+    This makes it so that each tile that is on the map gets modified as a draggable object.
+    It also makes it so that the boardTiles are all droppable objects, and upon dropping a
+        tile, so that no other tiles can be placed on the same board tile, and makes it so that 
+        the amount of tiles for a specific letter is updated. It also gets the information about 
+        the tiles so that the score can be calculated.
+-----------------------*/
 
 function newTiles() {
     $(".tiles").draggable( {

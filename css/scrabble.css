@@ -2,9 +2,8 @@
     Name: Elliot Ignatyev
     Email: anna_ignatyev@student.uml.edu
     Course: Fall 2019 GUI Programming I
-    Date:
+    Date: 12/19/19
     Assignment: Assignment 9
-    Notes:
 */
 
 /*
@@ -23,6 +22,9 @@ h1 {
     padding: 20px;
 }
 
+/*
+    This segment allows for there to be a transparent background image without making the whole app transparent.
+*/
 #bgImage {
     background-image: url(../images/scrabble/sboard.jpg);
     position: absolute;
@@ -32,6 +34,9 @@ h1 {
     height: 100%;
 }
 
+/*
+    Makes it so that the whole app is centered and has a background image seperate from the image needed for the tile holder.
+*/
 #app {
     width: 60%;
     margin: auto;
@@ -41,6 +46,11 @@ h1 {
 
 }
 
+/*
+    This segment is made to look seperate from the rest of the app, despite being a subsection of it. 
+    It styles the board where the tiles sit, as well as making it so that the tiles are seperate enough from one another so that 
+        it doesn't negatively affect the drag and drop functionality.
+*/
 #board {
     background-image: url(../images/scrabble/greenFelt.png);
     margin: auto;
@@ -59,6 +69,9 @@ h1 {
 
 }
 
+/*
+    This styles the score segment so that it fits in with the rest of the page and doesn't look jarringly out of place.
+*/
 #score {
     background-color: #b2753e;
     background-image: url(../images/scrabble/lightWood.png);
@@ -78,6 +91,10 @@ h2 {
     color: white;
 }
 
+/*
+    This resizes the tiles and makes sure that when they are dropped they don't lose any opacity as of the default jQuery UI css
+    This also makes it so that the tile holder is present on the page and looks as though it is 'holding' the tiles
+*/
 #tilePlacement {
     margin-bottom: 25px;
     background-image: url(../images/scrabble/scrabbleTileHolder.png);
@@ -94,6 +111,9 @@ h2 {
     margin: 5px;
 }
 
+/*
+    This styles the buttons so that they fit in on the page and are also noticable. 
+*/
 button {
     background-image: url(../images/scrabble/lightWood.png);
     border: ridge #c4864c 5px;

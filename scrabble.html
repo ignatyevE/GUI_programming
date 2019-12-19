@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+    Name: Elliot Ignatyev
+    Email: anna_ignatyev@student.uml.edu
+    Course: Fall 2019 GUI Programming I
+    Date:
+    Assignment: Assignment 9
+    Description:
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- other meta data -->
+        <title>Scrabble</title>
+        <!-- stylesheets -->
+
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel = "stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="css/scrabble.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    </head>
+    <body>
+        <!--
+
+        -->
+        <div id="bgImage"></div>
+
+        <div id="app">
+            <h1>Scrabble</h1>
+            <section id="board">
+
+                <img src="images/sbNormTile.png" alt="One tile of a scrabble board. It is the normal tile." class="boardTiles" id="normal">
+                <img src="images/sbDoubLetTile.png" alt="One tile of a scrabble board. It is a light blue double letter score tile, which modifies the score." class="boardTiles" id="double">
+                <img src="images/sbNormTile.png" alt="One tile of a scrabble board. It is the normal tile." class="boardTiles" id="normal">
+                <img src="images/sbNormTile.png" alt="One tile of a scrabble board. It is the normal tile." class="boardTiles" id="normal">
+                <img src="images/sbNormTile.png" alt="One tile of a scrabble board. It is the normal tile." class="boardTiles" id="normal">
+                <img src="images/sbTripLetTile.png" alt="One tile of a scrabble board. It is a blue triple letter score tile, which modifies the score." class="boardTiles" id="triple">
+                <img src="images/sbNormTile.png" alt="One tile of a scrabble board. It is the normal tile." class="boardTiles" id="normal">
+                <img src="images/sbNormTile.png" alt="One tile of a scrabble board. It is the normal tile." class="boardTiles" id="normal">
+            </section>
+            <div id="score">
+                <h2>SCORE</h2>
+                <p id="numScore"> 0 </p>
+            </div>
+            <section id="tilePlacement">
+
+            </section>
+            <button onclick="clearTiles()" id="newTiles">New Tiles</button>
+            <button onclick="resetGame()" id="startOver">Start Over</button>
+        </div>
+
+        <!-- scripts: -->
+            <script type="text/javascript" src="js/tiles.js">
+            </script>
+            <script type="text/javascript" src="js/dragDrop.js">
+            </script>
+            <script type="text/javascript" src="js/score.js">
+            </script>
+    </body>

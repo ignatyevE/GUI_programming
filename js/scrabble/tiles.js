@@ -2,9 +2,9 @@
     Name: Elliot Ignatyev
     Email: anna_ignatyev@student.uml.edu
     Course: Fall 2019 GUI Programming I
-    Date:
+    Date: 12/19/19
     Assignment: Assignment 9
-    Notes:
+    Notes: Used ScrabbleTiles as provided by assignment. It is properly creditted below. 
 */
 
 /*  File:  /~heines/91.461/91.461-2015-16f/461-assn/Scrabble_Pieces_AssociativeArray_Jesse.js
@@ -56,6 +56,19 @@ $(function(){
     tileGeneration();
 });
 
+/*--------------------------
+    tileGeneration
+    
+    This makes it so that 7 tiles are generated onto the corresponding html section.
+    Whenever a tile is used on the board, its numberRemaining is updated, and here it is checked
+        to make sure that it doesn't get placed on the board if there are zero remaining.
+    Tiles are randomly placed on the board. If the randomly generated tile has zero numberRemaining,
+        then a new tile is generated. In case the tiles generated keep having zero numberRemaining, 
+        there is a countdown to keep the loop from going forever. If this countdown reaches zero, 
+        that specific tile is skipped. 
+    
+--------------------------*/
+
 function tileGeneration() {
     //tests to make sure adding images to the tiles works
     //$("#tilePlacement").append(ScrabbleTiles["A"].image);
@@ -88,6 +101,15 @@ function tileGeneration() {
     }
 
 }
+
+/*--------------------------
+    clearTiles
+    
+    This removes all tiles from the board, and then generates new tiles. 
+    After the tiles are generated, they are then made to be draggable elements.
+    The boardTiles are then enabled again if they were disabled when a tile was dropped onto them. 
+        
+-------------------------*/
 
 function clearTiles() {
     $(".tiles").detach();
